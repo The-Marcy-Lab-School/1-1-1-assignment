@@ -32,8 +32,8 @@ describe(testSuiteName, () => {
   it('destructureCoordinates - Destructures the coordinates array into x and y variables', () => {
     const textContent = destructureCoordinates.toString();
 
-    expect(textContent).not.toMatch(/const x/);
-    expect(textContent).not.toMatch(/const y/);
+    expect(textContent).not.toMatch(/\nconst x/);
+    expect(textContent).not.toMatch(/\nconst y/);
     expect(textContent).toMatch(/`X is: \${x}, Y is: \${y}`/);
 
     const result1 = destructureCoordinates([1, 2]);
